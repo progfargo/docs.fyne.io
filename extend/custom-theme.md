@@ -17,7 +17,7 @@ type Theme interface {
 }
 ```
 
-To apply our theme changes we will first define a new type that that implements this interface.
+To apply our theme changes we will first define a new type that implements this interface.
 
 ### Define your theme
 
