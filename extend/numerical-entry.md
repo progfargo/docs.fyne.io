@@ -7,7 +7,7 @@ redirect_from:
  - /tutorial/numerical-entry
 ---
 
-In the traditional sense, GUI programs have used callbacks to customize actions for widgets. Fyne does not expose inserting custom callbacks to capture events on widgets, but it does not need to. The Go language is plenty extensible to make this work.
+In the traditional sense, GUI programs have used callbacks to customize actions for widgets. Fyne does not expose inserting custom callbacks to capture events on widgets, but it does not need to. The Go language is quite extensible to make this work.
 
 Instead we can simply use Type Embedding and extend the widget to only make it possible to enter numerical values.
 
@@ -72,7 +72,7 @@ func (e *numericalEntry) TypedShortcut(shortcut fyne.Shortcut) {
 }
 ```
 
-As a bonus, we can also make sure that mobile operating systems open the numerical keyboard instead of the default keyboard. This can be done by by first importng the `fyne.io/fyne/v2/driver/mobile` package and overwriting the `Keyboard() mobile.KeyboardType` method that is part of the `m̀obile.Keyboardable` interface. Inside the function, we then simply return the `mobile.NumberKeyboard` type.
+As a bonus, we can also make sure that mobile operating systems open the numerical keyboard instead of the default keyboard. This can be done by first importing the `fyne.io/fyne/v2/driver/mobile` package and overwriting the `Keyboard() mobile.KeyboardType` method that is part of the `m̀obile.Keyboardable` interface. Inside the function, we then simply return the `mobile.NumberKeyboard` type.
 
 ```go
 func (e *numericalEntry) Keyboard() mobile.KeyboardType {
