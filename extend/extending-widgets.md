@@ -40,7 +40,7 @@ func newTappableIcon(res fyne.Resource) *tappableIcon {
 
 We then add new functions to implement the `fyne.Tappable` interface, with
 those functions added the new `Tapped` function will be called every time the
-user taps our new icon.  The interface required has two functions,
+user taps our new icon.  The interface requires two functions,
 `Tapped(*PointEvent)` and `TappedSecondary(*PointEvent)`, so we will add both.
 
 ```go
